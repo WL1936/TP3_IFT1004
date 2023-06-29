@@ -18,3 +18,15 @@ l'application gérée par cette classe en entier avec les méthodes défénies �
 J'aimerais avoir ta compréhension post-lecture de ces chapitres. J'ai encore deux journées bien occupées à venir et de la visite
 en fin de semaine, mais je compte terminer la lecture de chapitre 13 ce soir, sinon demain midi, et j'enchaîne sur 14. Je crois
 que ça éviterait de repasser plusieurs fois sur les mêmes codes pour les améliorer.
+---------------------
+Serge, 2023-06-29, 10:45
+OK merci Carl!
+Pour ce qui concerne le menu, j'ai demandé à Walid lors du cours de ce matin (29 juin) et il m'a dit que c'était effectivement
+OK d'utiliser MenuButton, puisque Menu ne fonctionne pas sur Mac (ce sera aussi compatible avec les autres systèmes
+d'exploitation). Je retourne donc dans le code plus tard aujourd'hui. Je vais faire aussi les lectures, mais tout en
+rattrapant la matière précédente... :)
+
+Autre chose : j'ai modifié légèrement ton code dans carl.py, en fait plutôt pour poser des questions (l'une au sujet
+des interlignes, l'autre au sujet de la première entrée du livre_1.txt qui semble être un cas générique, et pas
+un "vrai" livre, mais peut-être je me trompe.
+---------------------

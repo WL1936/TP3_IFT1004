@@ -21,3 +21,6 @@ class Livre:
             prix = float(entree[3])
             print(cote, titre, pages, prix)
         return cote, titre, pages, prix
+
+
+

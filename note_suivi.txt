@@ -13,7 +13,7 @@ directement lorsque cet objet n'est pas réutilisé (en gros, lorsqu'il ne sert 
 permettant de bien compacter les codes.
 
 En faisant la lecture de chapitre 8, je constate qu'on a intérêt à d'abord bien construire les graphiques. Les premiers paragraphes
-du chapitre 13 clairient la suggestion du prof qui veut que nous créions une classe pour la gestion des livres, c-à-d
+du chapitre 13 clairifient la suggestion du prof qui veut que nous créions une classe pour la gestion des livres, c-à-d
 l'application gérée par cette classe en entier avec les méthodes défénies à même la classe pour en faire les manipulations.
 J'aimerais avoir ta compréhension post-lecture de ces chapitres. J'ai encore deux journées bien occupées à venir et de la visite
 en fin de semaine, mais je compte terminer la lecture de chapitre 13 ce soir, sinon demain midi, et j'enchaîne sur 14. Je crois

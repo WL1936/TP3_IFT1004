@@ -18,8 +18,7 @@ def charger(file):
 
 charger('livre1.txt')
 
-# Vraiment besoin de finir de lire le chap. 8 + probablement 14, j'ai vu que beaucoup de trucs avec class et widget
-# y était présent!
+
 ############################################
 
 # class Book():

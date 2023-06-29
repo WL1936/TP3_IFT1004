@@ -26,17 +26,17 @@ fichier_menu.add_command(label="Quitter", command=root.quit)
 # Menu "Trier"
 trier_menu = Menu(menu_principal)
 menu_principal.add_cascade(label="Trier", menu=trier_menu)
-fichier_menu.add_command(label="Cote", command=lambda: print("cote"))
-fichier_menu.add_command(label="Titre", command=lambda: print("titre"))
-fichier_menu.add_command(label="Pages", command=lambda: print("pages"))
-fichier_menu.add_command(label="Prix", command=lambda: print("prix"))
+trier_menu.add_command(label="Cote", command=lambda: print("cote"))
+trier_menu.add_command(label="Titre", command=lambda: print("titre"))
+trier_menu.add_command(label="Pages", command=lambda: print("pages"))
+trier_menu.add_command(label="Prix", command=lambda: print("prix"))
 
 
 # Menu "Recherche"
 recherche_menu = Menu(menu_principal)
 menu_principal.add_cascade(label="Recherche", menu=recherche_menu)
-fichier_menu.add_command(label="Cote", command=lambda: print("cote"))
-fichier_menu.add_command(label="Titre", command=lambda: print("titre"))
+recherche_menu.add_command(label="Cote", command=lambda: print("cote"))
+recherche_menu.add_command(label="Titre", command=lambda: print("titre"))
 
 
 # Menu "Aide"

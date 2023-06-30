@@ -41,5 +41,5 @@ os et utilise filedialog.askfilename), mais je suis incapable de renvoyer le nom
 recuperer.livre de la classe Livre. Bref: j'aimerais bien qu'on parle ensemble pour que tu puisses m'éclairer
 sur la façon de récupérer une information provenant d'un autre module dans une classe d'un autre module. J'y
 arrive quand les fonctions sont dans un même module sans classes, mais dès qu'une classe est impliquée, je
-reçois toujours des messages d'erreur... :) À bientôt!
+reçois toujours des messages d'erreur... :) À très bientôt!
 ----------------------

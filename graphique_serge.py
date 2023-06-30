@@ -9,8 +9,7 @@ import book_serge
 root = Tk()
 root.title("Gestion de livres")
 root.geometry("600x600")  # Dimensions de la fenêtre principale.
-frame_menu = Frame(root)
-#
+
 # Définition et configuration du menu principal.
 menu_principal = Menu(root)
 root.config(menu=menu_principal)
@@ -31,6 +30,7 @@ fichier_menu.add_command(label="Charger", command=lambda: print("charger"))
 
 fichier_menu.add_command(label="Sauvegarder", command=lambda: print("sauvegarder"))
 fichier_menu.add_command(label="Effacer", command=lambda: print("effacer"))
+
 fichier_menu.add_command(label="Quitter", command=root.quit)
 # Boutton associé avec cet item du menu.
 
@@ -64,7 +64,7 @@ def aide_box():
     annee = "2023"
     auteurs = "Carl Villeneuve-Lepage\net\nSerge Lacasse"
     message_total = "{}\n{}\n{}".format(message, annee, auteurs)
-    messagebox.showinfo("À propos", message_total)
+    messagebox.showinfo("À propos", message_total, parent=root)
 
 aide_menu.add_command(label="À propos", command=aide_box)
 

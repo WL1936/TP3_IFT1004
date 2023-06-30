@@ -1,9 +1,5 @@
 from tkinter import *
-from tkinter import messagebox, filedialog
-import os
-
-
-import book_serge
+from tkinter import messagebox
 
 # Initialisation de la fenêtre principale (root).
 root = Tk()

@@ -17,20 +17,9 @@ root.config(menu=menu_principal)
 # Menu "Fichier"
 fichier_menu = Menu(menu_principal)  # L'item "Fichier" relève du menu principal.
 menu_principal.add_cascade(label="Fichier", menu=fichier_menu)  # On rend l'item "Fichier" déroulant.
-# Options du menu déroulant.
-# def nom_fichier():
-#     nom = os.path.basename(book_serge.Livre(filedialog.askopenfilename()))
-#     book_serge.Livre.recup_livre(nom)
-
-
-
 fichier_menu.add_command(label="Charger", command=lambda: print("charger"))
-
-# fichier_menu.add_command(label="Charger", command=book_serge.Livre.recup_livre(file_name.askopenfilename()))
-
 fichier_menu.add_command(label="Sauvegarder", command=lambda: print("sauvegarder"))
 fichier_menu.add_command(label="Effacer", command=lambda: print("effacer"))
-
 fichier_menu.add_command(label="Quitter", command=root.quit)
 # Boutton associé avec cet item du menu.
 
@@ -50,7 +39,6 @@ recherche_menu.add_command(label="Cote", command=lambda: print("cote"))
 recherche_menu.add_command(label="Titre", command=lambda: print("titre"))
 
 # Menu "Aide"
-
 aide_menu = Menu(menu_principal)
 menu_principal.add_cascade(label="Aide", menu=aide_menu)
 

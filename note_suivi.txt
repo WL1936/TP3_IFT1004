@@ -30,3 +30,16 @@ Autre chose : j'ai modifié légèrement ton code dans carl.py, en fait plutôt 
 des interlignes, l'autre au sujet de la première entrée du livre_1.txt qui semble être un cas générique, et pas
 un "vrai" livre, mais peut-être je me trompe.
 ---------------------
+Serge, 2023-06-30, 16:10
+Bonjour Carl,
+Je crois avoir terminé la coquille de graphique.py (voir graphique_serge.py). Tous les éléments fonctionnent, mais
+il reste évidemment à lier chacun des items du menu à leur fonction respective. La seule fonction véritablement
+opérationnelle est le "À propos" de l'item "Aide" de la barre de menu. Sinon, pour le moment, chacun des éléments
+du menu (cascade) affiche leur propre nom au terminal. J'ai avancé un peu pour la première fonction (Charger), mais
+je bloque toujours au même endroit: je suis capable d'ouvrir une fenêtre pour choisir le fichier (j'ai importé
+os et utilise filedialog.askfilename), mais je suis incapable de renvoyer le nom du fichier à la fonction
+recuperer.livre de la classe Livre. Bref: j'aimerais bien qu'on parle ensemble pour que tu puisses m'éclairer
+sur la façon de récupérer une information provenant d'un autre module dans une classe d'un autre module. J'y
+arrive quand les fonctions sont dans un même module sans classes, mais dès qu'une classe est impliquée, je
+reçois toujours des messages d'erreur... :) À bientôt!
+----------------------

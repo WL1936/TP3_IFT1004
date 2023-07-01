@@ -1,4 +1,3 @@
-# from graphique_serge import *
 class Livre:
     def __init__(self, nom_fichier=""):
         self.nom_fichier = nom_fichier
@@ -21,3 +20,16 @@ class Livre:
             pages = entree[2]
             prix = entree[3]
             return cote, titre, pages, prix
+
+
+
+if __name__ == "__main__":
+     nom_fichier = "livre1.txt"
+     livre1 = Livre.recup_livre(Livre(), nom_fichier)
+     print(livre1)
+
+
+
+
+
+

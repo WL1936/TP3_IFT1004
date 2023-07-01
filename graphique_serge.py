@@ -1,5 +1,6 @@
 from tkinter import *
 from tkinter import messagebox
+import datetime
 
 # Initialisation de la fenêtre principale (root).
 root = Tk()
@@ -45,9 +46,9 @@ def aide_box():
         None
     """
     message = "Gestion de livres v1.0.0"
-    annee = "2023"
+    today = datetime.date.today().year
     auteurs = "Carl Villeneuve-Lepage\net\nSerge Lacasse"
-    message_total = "{}\n{}\n{}".format(message, annee, auteurs)
+    message_total = "{}\n{}\n{}".format(message, today, auteurs)
     messagebox.showinfo("À propos", message_total, parent=root)
 
 aide_menu.add_command(label="À propos", command=aide_box)

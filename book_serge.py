@@ -8,7 +8,7 @@ class Livre:
 
 
     def recup_livre(self, nom):
-        livre = open(nom, "r")
+        self.livre = open(nom, "r")
         print(livre)
         entrees_str = livre.readlines()
         print(entrees_str)

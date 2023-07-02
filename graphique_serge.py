@@ -54,3 +54,4 @@ def aide_box():
 aide_menu.add_command(label="À propos", command=aide_box)
 
 root.mainloop()
+root.destroy()

@@ -17,6 +17,7 @@ menu_principal.add_cascade(label="Fichier", menu=fichier_menu)  # On rend l'item
 fichier_menu.add_command(label="Charger", command=lambda: print("charger"))
 fichier_menu.add_command(label="Sauvegarder", command=lambda: print("sauvegarder"))
 fichier_menu.add_command(label="Effacer", command=lambda: print("effacer"))
+fichier_menu.add_separator()
 fichier_menu.add_command(label="Quitter", command=root.quit)
 # Boutton associé avec cet item du menu.
 

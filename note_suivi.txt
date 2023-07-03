@@ -43,3 +43,9 @@ sur la façon de récupérer une information provenant d'un autre module dans un
 arrive quand les fonctions sont dans un même module sans classes, mais dès qu'une classe est impliquée, je
 reçois toujours des messages d'erreur... :) À très bientôt!
 ----------------------
+3 juillet 15h13
+Salut!! Avec difficulté mais succès, je suis arrivé à figer une classe pour nos livres et l'utiliser pour formater l'affichage
+dans l'application. Ça passe par un attribut de la classe App() qui est entree_align. La portion est Aide-Box est fonctionnelle.
+En gros, la liste créer par "charger" en est une d'objets Book() avec les 4 attributs non-accessible autrement que par
+.cote, ou .titre, etc... C'est comme tu avais fais mais on annule une étape et tout passe par la classe. Je poursuis, mais je voulais push un truc fonctionnel
+avant de continuer pour tu vois la forme! N'oublie pas de ne pas bouger mes fichier ;)

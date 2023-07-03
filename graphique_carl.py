@@ -67,7 +67,7 @@ class App():
 
 if __name__ == '__main__':
     from tkinter import *
-    from carl import *
+    from book_carl import *
     f = App()
 
 

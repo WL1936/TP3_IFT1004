@@ -1,4 +1,4 @@
-import graphique_serge
+# import graphique_serge
 
 
 # ouvrir_fichier()
@@ -15,6 +15,6 @@ def effacer():
     Returns:
         None
     """
-
+charger()
 
 

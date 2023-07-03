@@ -3,7 +3,7 @@ import datetime
 import os
 from tkinter import *
 from tkinter import messagebox, filedialog
-import book_sans_classe
+# from book_sans_classe import*
 
 # Initialisation de la fenêtre principale (root).
 root = Tk()
@@ -29,6 +29,13 @@ def ouvrir_fichier():
         entree = entrees_str[i].split(",")
         liste_livre.append(entree)
     return(liste_livre)
+
+def charger():
+    """Charge et affiche un fichier sélectionné par l'utilisateur.
+    Returns:
+        None
+    """
+    entree_align(ouvrir_fichier())
 
 
 def entree_align(liste):
@@ -76,7 +83,7 @@ def aide_box():
 # Menu "Fichier"
 fichier_menu = Menu(menu_principal)  # L'item "Fichier" relève du menu principal.
 menu_principal.add_cascade(label="Fichier", menu=fichier_menu)  # On rend l'item "Fichier" déroulant.
-fichier_menu.add_command(label="Charger", command=book_sans_classe.charger)
+fichier_menu.add_command(label="Charger", command=charger)
 fichier_menu.add_command(label="Sauvegarder", command=lambda: print("sauvegarder"))
 fichier_menu.add_command(label="Effacer", command=effacer)
 fichier_menu.add_separator()

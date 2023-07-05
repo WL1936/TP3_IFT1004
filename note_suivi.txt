@@ -43,9 +43,19 @@ sur la façon de récupérer une information provenant d'un autre module dans un
 arrive quand les fonctions sont dans un même module sans classes, mais dès qu'une classe est impliquée, je
 reçois toujours des messages d'erreur... :) À très bientôt!
 ----------------------
-3 juillet 15h13
+Carl, 3 juillet 15h13
 Salut!! Avec difficulté mais succès, je suis arrivé à figer une classe pour nos livres et l'utiliser pour formater l'affichage
 dans l'application. Ça passe par un attribut de la classe App() qui est entree_align. La portion est Aide-Box est fonctionnelle.
 En gros, la liste créer par "charger" en est une d'objets Book() avec les 4 attributs non-accessible autrement que par
 .cote, ou .titre, etc... C'est comme tu avais fais mais on annule une étape et tout passe par la classe. Je poursuis, mais je voulais push un truc fonctionnel
 avant de continuer pour tu vois la forme! N'oublie pas de ne pas bouger mes fichier ;)
+------------------------
+Carl 4 juillet, 21h00
+Salut Serge,
+Ça y est, champagne !!  Tu trouveras dans les documents : book_carl et graphique_carl une version réussie pour l'affichage
+sans doublon. Aussi, j'ai ajusté la fonction "effacer" car elle doit aussi effacer le contenu de la variable globale, sinon quand on charge
+à nouveau, l'affichage est tel qu'il était avant l'effacement. J'ai commenté une partie de code qui pourrait faire un message
+à l'utilisateur que la dernière commande aurait généré des doublons mais ce n'est pas au point, d'où la volonté de commenter cette
+partie. J'ai remarqué que la fonction n'a pas besoin de retourner "liste_init" car la variable est globale et utilisable
+pour trie ou sauvegarde jusqu'à effacement. Je vais mieux dormir :)
+--------------------------

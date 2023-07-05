@@ -1,6 +1,8 @@
 import os
 import datetime
 from tkinter import messagebox, filedialog
+from typing import List, Any
+
 
 # Book definition
 class Book():
@@ -10,7 +12,8 @@ class Book():
         self.pages = liste[2]
         self.prix = float(liste[3])
 
-
+# global liste_init
+liste_init = list[any]
 
 # FONCTIONS
 def charger():
@@ -36,14 +39,13 @@ def charger():
 
 
 
-#
-# def effacer():
-#     """Efface le contenu de l'interface.
-#     Returns:
-#         None
-#     """
-#     for i in root.grid_slaves():
-#         i.grid_forget()
+
+def effacer():
+    """Efface le contenu de l'interface.
+    Returns:
+        None
+    """
+    return []
 
 
 def aide_box():

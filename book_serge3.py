@@ -1,7 +1,19 @@
+import datetime
+import os
 from tkinter import *
 from tkinter import filedialog
-import os
+
+import graphique_serge3
+
 liste_totale = []
+
+class Book():
+    def __init__(self, liste):
+        self.cote = liste[0]
+        self.titre = liste[1]
+        self.pages = int(liste[2])
+        self.prix = float(liste[3])
+
 def charger():
     """Ouvre une fenêtre pour choisir et ouvrir un fichier et crée une liste de listes.
     Ajoute également une liste lorsque différente.
@@ -16,43 +28,20 @@ def charger():
     global liste_totale
     for i in range(len(entrees_str)):  # Permet de créer une liste 2D (liste des attributs de chaque entrée).
         entree = entrees_str[i].split(",")
-        liste_totale.append(entree)
         liste_locale.append(entree)
-    print(liste_totale)
+        if entree not in liste_totale:
+            liste_totale.append(entree)
     return liste_totale
 
 # charger()
 
-def chercher_cote(cote):
-    for entree in charger():
-        if cote in entree[0]:
-            print(entree[0])
-            break
+def chercher_cote():
+    cote = graphique_serge3.saisir_cote()
+    print(cote)
+    for i in range(len(liste_totale)):
+        if cote == liste_totale[i][0]:
+            print("TRUE")
+            return TRUE
         else:
-            print("Message d'erreur dans boîte")
-            break
-
-
-
-
-
-#
-# def effacer():
-#     """Efface le contenu de l'interface.
-#     Returns:
-#         None
-#     """
-#     for i in root.grid_slaves():
-#         i.grid_forget()
-
-
-def aide_box():
-    """Affiche le message "À propos".
-    Returns:
-        None
-    """
-    message = "Gestion de livres v1.0.0"
-    today = datetime.date.today().year
-    auteurs = "Carl Villeneuve-Lepage\net\nSerge Lacasse"
-    message_total = "{}\n{}\n{}".format(message, today, auteurs)
-    return messagebox.showinfo('À propos', message_total)
+            print("FALSE")
+            return FALSE

@@ -1,3 +1,5 @@
+import sys
+
 
 # Initialisation de la fenêtre principale (root).
 class App():
@@ -56,6 +58,7 @@ class App():
         Returns:
             None
         """
+        global table
         columns = ("cote", "titre", "pages", "prix")
         table = Treeview(self.root, columns=columns, show="", height=600)
         style = Style(self.root)
@@ -89,6 +92,40 @@ class App():
             table.insert('', END, values=livre)
         table.grid(row=0, column=0, sticky=E)
 
+        # Bindings
+        if sys.platform == "darwin":
+            table.bind("<ButtonRelease-1>", self.clic_droit)
+        else:
+            table.bind("<ButtonRelease-3>", self.clic_droit)
+
+
+
+    def clic_droit(self, event):
+        ligne_select = table.focus()
+        tuple_valeur = table.item(ligne_select, 'values', )
+        valeur = tuple_valeur[1]
+
+        fen_modif = Toplevel()
+        fen_modif.title("Modifier titre")
+        fen_modif.geometry("250x150")
+        label_format = Label(fen_modif, text="Titre actuel :\n{}".format(valeur))
+        label_format.grid(padx=30, row=1)
+        label_nouveau = Label(fen_modif, text="Entrez votre nouveau titre :")
+        label_nouveau.grid(row=2)
+
+        entree_box = Entry(fen_modif)
+        entree_box.grid(padx=30)
+        entree_box.focus()
+
+        def modifier_titre():
+            nouveau_titre = entree_box.get()
+            table.set(ligne_select, 1, value=nouveau_titre.upper())
+            fen_modif.destroy()
+
+
+
+        bouton_modif = Button(fen_modif, text="Modifier", command=modifier_titre)
+        bouton_modif.grid(row=4)
 
     def effacer(self):
         """Efface le contenu de l'interface.
@@ -300,7 +337,6 @@ class App():
         for livre in iter_list:
             table.insert('', END, values=livre)
         table.grid(row=0, column=0, sticky=E)
-
 
 
 if __name__ == '__main__':

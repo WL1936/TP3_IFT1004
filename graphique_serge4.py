@@ -1,6 +1,3 @@
-import sys
-
-
 # Initialisation de la fenêtre principale (root).
 class App():
     def __init__(self):
@@ -54,6 +51,7 @@ class App():
 
     def tableau(self):
         """Création d'un tableau qui intégrera la liste des livres et initialisation de ses paramètres.
+        Initialisation des "bindings" pour les événements souris.
 
         Returns:
             None
@@ -71,6 +69,7 @@ class App():
 
         # Intégration des données de la liste dans le tableau.
         global liste_init
+        global iter_list
 
         liste = charger()
         if liste_init == list[any]:
@@ -98,8 +97,6 @@ class App():
         else:
             table.bind("<ButtonRelease-3>", self.clic_droit)
 
-
-
     def clic_droit(self, event):
         ligne_select = table.focus()
         tuple_valeur = table.item(ligne_select, 'values', )
@@ -120,7 +117,10 @@ class App():
         def modifier_titre():
             nouveau_titre = entree_box.get()
             table.set(ligne_select, 1, value=nouveau_titre.upper())
+            row = int(ligne_select[3])
             fen_modif.destroy()
+
+            iter_list[row-1][1] = nouveau_titre
 
 
 
@@ -340,6 +340,7 @@ class App():
 
 
 if __name__ == '__main__':
+    import sys
     from tkinter import *
     from book_serge4 import *
     from tkinter.ttk import Treeview, Style

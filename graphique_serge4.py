@@ -112,15 +112,19 @@ class App():
             cote_saisie(str): Cote saisie par l'utilisateur.
         """
         # Création de la fenêtre de saisie.
+        if liste_init == list[any]:
+            messagebox.showinfo("Liste vide", "Veuillez charger un fichier", parent=self.root)
+            return None
+        else:
+            fen = Toplevel()
+            fen.title("Chercher par cote")
+            fen.geometry("250x100")
+            label_format = Label(fen, text="\nFormat : XX000")
+            label_format.grid(padx=30, row=1, sticky=W)
+            entree_box = Entry(fen)
+            entree_box.grid(padx=30)
+            entree_box.focus()
 
-        fen = Toplevel()
-        fen.title("Chercher par cote")
-        fen.geometry("250x100")
-        label_format = Label(fen, text="\nFormat : XX000")
-        label_format.grid(padx=30, row=1, sticky=W)
-        entree_box = Entry(fen)
-        entree_box.grid(padx=30)
-        entree_box.focus()
 
         def chercher_cote(cote):
             global liste_init
@@ -150,6 +154,7 @@ class App():
         bouton_annuler = Button(fen, text="Annuler", command=fen.destroy)
         bouton_annuler.grid(row=3, sticky=E, padx=30)
 
+
     def saisir_titre(self):
         """Ouvre une fenêtre pour récupérer la cote soumise par l'utilisateur et la retourne.
 
@@ -157,15 +162,28 @@ class App():
             cote_saisie(str): Cote saisie par l'utilisateur.
         """
         # Création de la fenêtre de saisie.
+        if liste_init == list[any]:
+            messagebox.showinfo("Liste vide", "Veuillez charger un fichier", parent=self.root)
+            return None
+        else:
+            fen = Toplevel()
+            fen.title("Chercher par titre")
+            fen.geometry("250x100")
+            label_format = Label(fen, text="\nEntrez titre")
+            label_format.grid(padx=30, row=1, sticky=W)
+            entree_box = Entry(fen)
+            entree_box.grid(padx=30)
+            entree_box.focus()
 
-        fen = Toplevel()
-        fen.title("Chercher par titre")
-        fen.geometry("250x100")
-        label_format = Label(fen, text="\nEntrez titre")
-        label_format.grid(padx=30, row=1, sticky=W)
-        entree_box = Entry(fen)
-        entree_box.grid(padx=30)
-        entree_box.focus()
+        def popup_titres(titres, j):
+            popup = Toplevel()
+            popup.title("Livres trouvés")
+            label = Label(popup, text=titres)
+            label.pack()
+            popup.geometry('300x150')
+            bouton_ok = Button(popup, text="  OK  ", anchor=CENTER, command=popup.destroy)
+            bouton_ok.pack(pady=3)
+
 
         def chercher_titre(titre_soumis):
             global liste_init
@@ -175,11 +193,12 @@ class App():
             livres = ""
             for i in liste_init:
                 if titre_soumis == i.titre[0:end]:
-                    livres_trouves.append(str(i.cote) + " " + str(i.titre) + " " + str(i.pages) + " " + str(i.prix))
+                    livres_trouves.append(str(i.cote) + " " + str(i.titre) + "   " + str(i.pages) + "  " + str(i.prix))
             if len(livres_trouves) != 0:
                 for j in range(len(livres_trouves)):
-                    livres += (livres_trouves[j]) + "\n"
-                messagebox.showinfo("Livres", livres, parent=self.root, )
+                    livres += "\n" + (livres_trouves[j])
+                # messagebox.showinfo("Livres", livres, parent=self.root, )
+                popup_titres(livres, j)
             else:
                 messagebox.showinfo("Absent!", "Cote non trouvée", parent=self.root)
 
